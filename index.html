@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ufuk Yılmaz | AI & Edge AI Engineer</title>
+  <meta name="description" content="Ufuk Yılmaz - Yapay Zekâ, Uçta Yapay Zekâ (Edge AI), Bilgisayarlı Görü ve Büyük Dil Modelleri (LLM) Mühendisi Portfolyosu.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fef2f2',
+              100: '#fee2e2',
+              500: '#ef4444',
+              600: '#dc2626',
+              700: '#b91c1c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #dc2626;
+    }
+
+    /* Glow Gradients */
+    .glow-bg {
+      background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.15) 0%, rgba(9, 9, 11, 0) 70%);
+    }
+    .card-glow:hover {
+      box-shadow: 0 0 30px -10px rgba(220, 38, 38, 0.3);
+      border-color: rgba(220, 38, 38, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-brand-600 selection:text-white transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-600 to-zinc-900 border border-brand-500/30 flex items-center justify-center font-bold font-mono text-white text-base shadow-lg shadow-brand-600/20 group-hover:scale-105 transition-transform">
+          UY
+        </div>
+        <span class="font-bold tracking-tight text-zinc-100 group-hover:text-brand-500 transition-colors">Ufuk Yılmaz</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-400">
+        <a href="#about" class="hover:text-zinc-100 transition-colors">Hakkımda</a>
+        <a href="#projects" class="hover:text-zinc-100 transition-colors">Projeler</a>
+        <a href="#experience" class="hover:text-zinc-100 transition-colors">Deneyim</a>
+        <a href="#skills" class="hover:text-zinc-100 transition-colors">Yetenekler</a>
+        <a href="#contact" class="hover:text-zinc-100 transition-colors">İletişim</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="Ufuk_Yilmaz_CV_TR.pdf" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 text-xs font-semibold transition-all">
+          <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          CV İndir (PDF)
+        </a>
+        <a href="#contact" class="px-3.5 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold shadow-lg shadow-brand-600/25 transition-all">
+          İletişime Geç
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden glow-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs font-medium text-zinc-300 mb-6">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        Yapay Zekâ & Edge AI Mühendisi • Yeni Fırsatlara Açık
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Left -->
+        <div class="lg:col-span-8">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-5">
+            Kısıtlı Donanımlarda <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-rose-400 to-amber-400">
+              Gerçek Zamanlı Yapay Zekâ
+            </span> <br>
+            ve Büyük Dil Modelleri.
+          </h1>
+
+          <p class="text-base sm:text-lg text-zinc-400 max-w-2xl font-normal leading-relaxed mb-8">
+            Bilgisayarlı görü, nesne tespiti (<span class="text-zinc-200 font-medium">YOLO</span>), model kuantizasyonu (<span class="text-zinc-200 font-medium">NCNN INT8</span>), gömülü donanımlar (<span class="text-zinc-200 font-medium">Raspberry Pi</span>) ve yerel <span class="text-zinc-200 font-medium">LLM / RAG</span> mimarileri üzerine çalışan Bilgisayar Mühendisliği mezunuyum.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-xl shadow-brand-600/30 transition-all">
+              <span>Projeleri Keşfet</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <a href="https://github.com/UFUKtr08" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 font-semibold text-sm transition-all">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Profilim</span>
+            </a>
+            <a href="mailto:ufukyzmain@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800/80 font-medium text-sm transition-all">
+              <span>ufukyzmain@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right: Quick Stats Card -->
+        <div class="lg:col-span-4">
+          <div class="bg-zinc-900/70 border border-zinc-800/80 rounded-2xl p-6 backdrop-blur-xl relative shadow-2xl">
+            <div class="absolute -top-3 -right-3 w-20 h-20 bg-brand-600/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <h3 class="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-4 pb-2 border-b border-zinc-800 flex items-center justify-between">
+              <span>Mühendislik Profili</span>
+              <span class="text-brand-500 font-bold">2026</span>
+            </h3>
+
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-zinc-400">Üniversite Not Ortalaması</span>
+                <span class="font-mono font-bold text-white text-base">3.70 / 4.00</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-zinc-400">Eğitim</span>
+                <span class="text-sm font-semibold text-zinc-200">Ostim Teknik Üni.</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-zinc-400">Bölüm</span>
+                <span class="text-sm font-semibold text-zinc-200">Bilgisayar Müh. (%100 İng)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-zinc-400">İngilizce Seviyesi</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-xs font-semibold">C1 İleri Düzey</span>
+              </div>
+              <div class="pt-3 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+                <span>Konum</span>
+                <span>Ankara / Türkiye</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS / STATS STRIP -->
+  <section class="border-y border-zinc-800/60 bg-zinc-900/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-3xl font-extrabold text-white font-mono tracking-tight">3.70</div>
+        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1">Akademik Başarı (GPA)</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-brand-500 font-mono tracking-tight">Edge AI</div>
+        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1">NCNN & Raspberry Pi</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-white font-mono tracking-tight">5+</div>
+        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1">Uçtan Uca AI Projesi</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-zinc-200 font-mono tracking-tight">C1</div>
+        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1">İngilizce Yeterlilik</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-20 border-b border-zinc-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">Hakkımda</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-6">
+          Teorik Derinlik, Uygulamalı Donanım Entegrasyonu.
+        </h3>
+        <p class="text-zinc-300 leading-relaxed text-base mb-6">
+          Ostim Teknik Üniversitesi Bilgisayar Mühendisliği (%100 İngilizce) bölümünden 3.70 GPA ile mezun oldum. Akademik eğitimim boyunca Yapay Zekâ, Makine Öğrenmesi, Bilgisayarlı Görü ve Büyük Dil Modelleri (LLM) alanlarına odaklandım.
+        </p>
+        <p class="text-zinc-400 leading-relaxed text-base mb-6">
+          Yapay zekâ modellerini yalnızca yüksek performanslı sunucularda değil, gerçek dünyada kaynak kısıtlı donanımlar (Raspberry Pi, uç mikroişlemciler) üzerinde gerçek zamanlı ve verimli çalışacak şekilde optimize etmekte uzmanlaştım. Görüntü işleme filtrelerinden NCNN INT8 kuantizasyonuna, özel LoRA model ince ayarından FastAPI microservice mimarilerine kadar uçtan uca sistemler inşa ediyorum.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-3">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </div>
+            <h4 class="font-bold text-white text-sm mb-1">Bilgisayarlı Görü</h4>
+            <p class="text-xs text-zinc-400">YOLO, OpenCV, Time-of-Flight (ToF) kamera işleme algoritmaları.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-3">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+            </div>
+            <h4 class="font-bold text-white text-sm mb-1">Edge AI & Kuantizasyon</h4>
+            <p class="text-xs text-zinc-400">NCNN INT8 optimizasyonu, Raspberry Pi 4 ve gömülü donanımlar.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center mb-3">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h4 class="font-bold text-white text-sm mb-1">LLM & Üretken Yapay Zekâ</h4>
+            <p class="text-xs text-zinc-400">Stable Diffusion ince ayarı, RAG sistemleri ve yerel model dağıtımı.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-20 border-b border-zinc-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">Öne Çıkan Çalışmalar</h2>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Projeler & Sistem Mimarileri</h3>
+        </div>
+        <p class="text-sm text-zinc-400 mt-2 md:mt-0 max-w-md">
+          Uç donanımlarda canlı çıkarım testleri ve pratik problem çözümleri içeren gerçek projeler.
+        </p>
+      </div>
+
+      <!-- FEATURED PROJECT (FLAGSHIP HERO CARD) -->
+      <div class="mb-10 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 border border-zinc-800 p-6 sm:p-8 card-glow transition-all">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-brand-600/20 text-brand-400 border border-brand-500/30 text-xs font-bold uppercase tracking-wider">
+              Yıldız Proje • Bitirme Tezi
+            </span>
+            <span class="text-xs text-zinc-400 font-mono">Edge AI • Computer Vision</span>
+          </div>
+          <span class="text-xs font-mono text-zinc-400">2026</span>
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
+          Otonom Çalışan Güvenliği İzleme Sistemi
+        </h3>
+
+        <p class="text-zinc-300 leading-relaxed text-sm sm:text-base mb-6 max-w-4xl">
+          İş sahasındaki güvenlik ihlallerini (baret, yelek vb.) kamera ve yapay zekâ aracılığıyla otonom olarak gerçek zamanlı tespit eden, anlık monitörize eden ve ihlalleri veritabanına kaydeden uçtan uca çalışan güvenliği sistemi.
+        </p>
+
+        <!-- Technical Achievements Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-zinc-950/70 border border-zinc-800/80 rounded-xl p-4">
+            <div class="text-xs font-mono text-brand-400 mb-1">01. Model Optimizasyonu</div>
+            <div class="text-sm font-semibold text-zinc-200 mb-1">YOLO + NCNN INT8</div>
+            <p class="text-xs text-zinc-400">Proje gereksinimlerine göre fine-tune edilen YOLO modeli, Raspberry Pi üzerinde yüksek FPS için INT8 kuantizasyonuna uyarlandı.</p>
+          </div>
+
+          <div class="bg-zinc-950/70 border border-zinc-800/80 rounded-xl p-4">
+            <div class="text-xs font-mono text-brand-400 mb-1">02. Donanım & Görüntü İşleme</div>
+            <div class="text-sm font-semibold text-zinc-200 mb-1">Raspberry Pi 4 + PiCamera 3</div>
+            <p class="text-xs text-zinc-400">Kamera verilerini yakalayıp düşük gecikmeyle işleyen özel bir görüntü işleme iş hattı (pipeline) kuruldu.</p>
+          </div>
+
+          <div class="bg-zinc-950/70 border border-zinc-800/80 rounded-xl p-4">
+            <div class="text-xs font-mono text-brand-400 mb-1">03. Mimari & İletişim</div>
+            <div class="text-sm font-semibold text-zinc-200 mb-1">Client-Server & Web Dashboard</div>
+            <p class="text-xs text-zinc-400">Tespit edilen güvenlik ihlallerini anlık olarak web paneline aktaran ve veritabanında saklayan istemci-sunucu yapısı tasarlandı.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-zinc-800/80">
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">YOLO</span>
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">Raspberry Pi 4 (4GB)</span>
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">NCNN INT8</span>
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">PiCamera 3</span>
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">Python</span>
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">Client-Server</span>
+          <span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">Web Interface</span>
+        </div>
+      </div>
+
+      <!-- OTHER PROJECTS GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Project 2: Stable Diffusion 1.5 Fine-Tuning -->
+        <div class="rounded-xl bg-zinc-900/60 border border-zinc-800 p-6 card-glow transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-zinc-400 font-mono mb-3">
+              <span class="text-brand-400">Generative AI • LoRA / Dreambooth</span>
+              <span>2024 - 2025</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Stable Diffusion 1.5 Özel Yüz İnce Ayarı</h4>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+              Kişiselleştirilmiş görsel üretimi için Stable Diffusion 1.5 modeline ince ayar (fine-tuning) yapıldı. Model, üretilen farklı konseptlerdeki görsellere belirli bir spesifik yüz kimliğini yüksek sadakatle entegre edebilecek şekilde eğitildi.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Stable Diffusion 1.5</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">LoRA</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">PyTorch</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Generative AI</span>
+          </div>
+        </div>
+
+        <!-- Project 3: AI-Based Email Subscription Analysis API -->
+        <div class="rounded-xl bg-zinc-900/60 border border-zinc-800 p-6 card-glow transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-zinc-400 font-mono mb-3">
+              <span class="text-brand-400">NLP • Microservice API</span>
+              <span>2025</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Yapay Zekâ Destekli E-posta Abonelik Analiz API'si</h4>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+              FastAPI kullanılarak gelen e-posta içeriklerini otomatik ayrıştıran bir API geliştirildi. Doğal Dil İşleme (NLP) yöntemleriyle e-postanın bir abonelik başlangıcını belirtip belirtmediği sınıflandırıldı; firma adı ve abonelik ücreti gibi kritik varlıklar (entity) çıkarılarak veritabanına işlendi.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">FastAPI</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">NLP</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Entity Extraction</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">SQL DB</span>
+          </div>
+        </div>
+
+        <!-- Project 4: GPT-3 API RAG System -->
+        <div class="rounded-xl bg-zinc-900/60 border border-zinc-800 p-6 card-glow transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-zinc-400 font-mono mb-3">
+              <span class="text-brand-400">LLM • Information Retrieval</span>
+              <span>2024</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">GPT-3 API Tabanlı RAG Sistemi</h4>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+              GPT-3 API kullanılarak temel bir Bilgi Erişim Destekli Üretim (Retrieval-Augmented Generation) altyapısı kuruldu. Harici bilgi kaynaklarından ilgili bağlamı alıp dil modeline besleyerek halüsinasyonsuz ve doğru yanıtlar üreten bir sistem mimarisi geliştirildi.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">GPT-3 API</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">RAG</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Prompt Engineering</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Python</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Reinforcement Learning Agent -->
+        <div class="rounded-xl bg-zinc-900/60 border border-zinc-800 p-6 card-glow transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-zinc-400 font-mono mb-3">
+              <span class="text-brand-400">Reinforcement Learning • Autonomous Agent</span>
+              <span>2024</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">Engellerden Kaçınan Pekiştirmeli Öğrenme Ajanı</h4>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+              Kendi kendine engelleri aşarak hedefe ulaşmayı öğrenen otonom bir pekiştirmeli öğrenme ajanı geliştirildi. Ajanın çevre ile etkileşime girip ödül-ceza mekanizmalarıyla optimal rotayı keşfettiği bir simülasyon ortamı uygulandı.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-zinc-800/60">
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Reinforcement Learning</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Q-Learning</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Python</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-800/80 text-zinc-300 font-mono text-xs">Simulation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION TIMELINE -->
+  <section id="experience" class="py-20 border-b border-zinc-800/60 bg-zinc-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Experience Column -->
+        <div class="lg:col-span-7">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">Kariyer</h2>
+          <h3 class="text-2xl font-bold text-white tracking-tight mb-8">İş & Staj Deneyimi</h3>
+
+          <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-zinc-800">
+            
+            <!-- Subtracker -->
+            <div class="relative pl-10">
+              <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-zinc-950"></div>
+              <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-xl p-5">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                  <h4 class="text-base font-bold text-white">Yapay Zekâ Mühendisi & Takım Lideri</h4>
+                  <span class="text-xs font-mono text-zinc-400">Eylül 2024 – Eylül 2025</span>
+                </div>
+                <div class="text-sm font-semibold text-brand-500 mb-3">Subtracker • Ankara, Türkiye</div>
+                <ul class="text-xs sm:text-sm text-zinc-400 space-y-1.5 list-disc list-inside">
+                  <li>Yapay zekâ geliştirme ekibine liderlik etti ve yapay zekâ çözümlerinin mimarisini oluşturdu.</li>
+                  <li>Yapay zekâ odaklı geliştirme, model seçimi ve teknik uygulama süreçlerinin sorumluluğunu üstlendi.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- MAVİNCİ -->
+            <div class="relative pl-10">
+              <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-zinc-700 border-4 border-zinc-950"></div>
+              <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-xl p-5">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+                  <h4 class="text-base font-bold text-white">Yapay Zekâ & Görüntü İşleme Stajyeri</h4>
+                  <span class="text-xs font-mono text-zinc-400">Şubat 2026 – Mayıs 2026</span>
+                </div>
+                <div class="text-sm font-semibold text-brand-500 mb-3">MAVİNCİ Bilişim Sanayi ve Ticaret A.Ş. • Ankara</div>
+                <ul class="text-xs sm:text-sm text-zinc-400 space-y-1.5 list-disc list-inside">
+                  <li><strong class="text-zinc-200">NiceGUI</strong> ile kullanıcı dostu kontrol ve test arayüzleri geliştirdi.</li>
+                  <li><strong class="text-zinc-200">OpenCV</strong> ile Optik Time-of-Flight (ToF) kamera derinlik verilerini işledi.</li>
+                  <li>Gürültü azaltma, filtreleme ve veri kalitesini iyileştirme algoritmaları geliştirdi.</li>
+                  <li>Kamera tabanlı görüntü işleme akışlarını optimize ederek sistem gecikmesini minimize etti.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education & Certifications Column -->
+        <div class="lg:col-span-5">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">Akademi</h2>
+          <h3 class="text-2xl font-bold text-white tracking-tight mb-8">Eğitim & Sertifikalar</h3>
+
+          <!-- Education Card -->
+          <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-xl p-5 mb-6">
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span>Eylül 2021 – Haziran 2026</span>
+              <span class="px-2 py-0.5 rounded bg-brand-600/20 text-brand-400 font-bold">GPA: 3.70 / 4.00</span>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1">Ostim Teknik Üniversitesi</h4>
+            <div class="text-sm text-zinc-300 mb-2">Bilgisayar Mühendisliği (Lisans • %100 İngilizce)</div>
+            <p class="text-xs text-zinc-400">Yapay Zekâ, Bilgisayarlı Görü ve Gömülü Sistemler ağırlıklı dersler ve bitirme tezi.</p>
+          </div>
+
+          <!-- Certifications -->
+          <h4 class="text-sm font-mono uppercase text-zinc-400 mb-3 tracking-wider">Resmi Sertifikalar</h4>
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 flex items-start justify-between gap-3">
+              <div>
+                <div class="text-sm font-semibold text-white">Veri Bilimi ve Makine Öğrenmesi</div>
+                <div class="text-xs text-brand-400">Huawei</div>
+              </div>
+              <span class="text-xs font-mono text-zinc-500 shrink-0">Eylül 2026</span>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 flex items-start justify-between gap-3">
+              <div>
+                <div class="text-sm font-semibold text-white">Milli Teknoloji Akademisi Yapay Zekâ Temel Eğitim</div>
+                <div class="text-xs text-brand-400">T.C. Sanayi ve Teknoloji Bakanlığı</div>
+              </div>
+              <span class="text-xs font-mono text-zinc-500 shrink-0">Şubat 2026</span>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 flex items-start justify-between gap-3">
+              <div>
+                <div class="text-sm font-semibold text-white">Python ile Makine Öğrenmesi Uygulamaları</div>
+                <div class="text-xs text-brand-400">BTK Akademi</div>
+              </div>
+              <span class="text-xs font-mono text-zinc-500 shrink-0">Haziran 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS MATRIX -->
+  <section id="skills" class="py-20 border-b border-zinc-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-500 mb-2">Uzmanlık Alanları</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Teknoloji & Yetenek Havuzu</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Edge AI & Computer Vision -->
+        <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800">
+          <div class="text-brand-500 font-mono text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            Edge AI & Computer Vision
+          </div>
+          <h4 class="text-lg font-bold text-white mb-3">Görüntü İşleme & Uç Çıkarım</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">OpenCV</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">YOLO</span>
+            <span class="px-2.5 py-1 rounded bg-brand-600/20 text-brand-300 border border-brand-500/30 text-xs font-mono">NCNN INT8</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">Raspberry Pi 4</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">PiCamera 3</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">ToF Cameras</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">Noise Filtering</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Generative AI & LLMs -->
+        <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800">
+          <div class="text-brand-500 font-mono text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            GenAI & Large Language Models
+          </div>
+          <h4 class="text-lg font-bold text-white mb-3">LLM & Üretken Yapay Zekâ</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">Stable Diffusion 1.5</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">Fine-Tuning (LoRA)</span>
+            <span class="px-2.5 py-1 rounded bg-brand-600/20 text-brand-300 border border-brand-500/30 text-xs font-mono">RAG Mimarisi</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">Local LLM Deployment</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">Local AI Inference</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">GPT-3/4 APIs</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">NLP</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Programming Languages -->
+        <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800">
+          <div class="text-brand-500 font-mono text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            Languages & Frameworks
+          </div>
+          <h4 class="text-lg font-bold text-white mb-3">Programlama Dilleri</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded bg-brand-600/20 text-brand-300 border border-brand-500/30 text-xs font-mono">Python (Uzman)</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">C++</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">C</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">C#</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">FastAPI</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">RESTful APIs</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800 text-xs font-mono text-zinc-200">NiceGUI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20 relative glow-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-600/20 text-brand-400 border border-brand-500/30 text-xs font-mono mb-4">
+        İletişim & Birlikte Çalışma
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+        Bir Projeniz mi Var? <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-amber-400">
+          Hemen İletişime Geçelim.
+        </span>
+      </h2>
+
+      <p class="text-zinc-400 text-base max-w-xl mx-auto mb-10">
+        Yapay zekâ, Edge AI veya bilgisayarlı görü projeleriniz, tam zamanlı iş teklifleri veya akademik iş birlikleri için bana dilediğiniz zaman ulaşabilirsiniz.
+      </p>
+
+      <!-- Contact Info Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 text-left">
+        <a href="mailto:ufukyzmain@gmail.com" class="p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-brand-500/50 transition-all group">
+          <div class="text-xs font-mono text-zinc-500 mb-1">E-Posta</div>
+          <div class="text-sm font-bold text-white group-hover:text-brand-400 transition-colors">ufukyzmain@gmail.com</div>
+        </a>
+
+        <a href="tel:05364362132" class="p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-brand-500/50 transition-all group">
+          <div class="text-xs font-mono text-zinc-500 mb-1">Telefon / WhatsApp</div>
+          <div class="text-sm font-bold text-white group-hover:text-brand-400 transition-colors">0536 436 21 32</div>
+        </a>
+
+        <a href="https://github.com/UFUKtr08" target="_blank" class="p-5 rounded-xl bg-zinc-900/80 border border-zinc-800 hover:border-brand-500/50 transition-all group">
+          <div class="text-xs font-mono text-zinc-500 mb-1">GitHub</div>
+          <div class="text-sm font-bold text-white group-hover:text-brand-400 transition-colors">github.com/UFUKtr08</div>
+        </a>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:ufukyzmain@gmail.com?subject=Ufuk%20Yilmaz%20-%20İş%20Birligi%20/%20Gorusme" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-xl shadow-brand-600/30 transition-all">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span>E-Posta Gönder</span>
+        </a>
+        <a href="Ufuk_Yilmaz_CV_TR.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 font-bold text-sm transition-all">
+          <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <span>Özgeçmişi İndir (PDF)</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-zinc-800/80 bg-zinc-950 text-center text-xs text-zinc-500 font-mono">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 Ufuk Yılmaz. Tüm hakları saklıdır.</div>
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="https://github.com/UFUKtr08" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+        <span>•</span>
+        <a href="mailto:ufukyzmain@gmail.com" class="hover:text-white transition-colors">E-Posta</a>
+        <span>•</span>
+        <a href="Ufuk_Yilmaz_CV_TR.pdf" target="_blank" class="hover:text-white transition-colors">CV</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
